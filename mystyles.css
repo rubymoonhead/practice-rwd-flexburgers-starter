@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;600&display=swap");
+
+* {
+	/* view layout on screen while styling | remove after styling	*/
+	/* outline: 0.0625rem dotted #ee4b2b; */
+
+	/* include rules for specific web page below this line */
+	margin: 0;
+	padding: 0;
+}
+
+/* span test for optimal line length 45-75 | remove after styling */
+.optimalline {
+	/* 	background-color: #preferred color; */
+}
+
+/* the whole enchilada */
+html {
+	box-sizing: border-box; /* width and height properties includes content padding border */
+	font-size: 100%;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit; /* inherits property from parent element */
+}
+
+/* body */
+body {
+	font-family: "MuseoModerno", cursive;
+}
+
+/* header */
+.site-logo {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
+.site-logo-icon {
+	width: 5em;
+}
+.site-logo-name {
+	color: #ffff00;
+	text-transform: uppercase;
+	font-size: 2.5rem;
+	margin-left: 0.5em;
+}
+header {
+	background-color: #ee4b2b;
+	padding: 1em;
+}
+
+/* navigation */
+nav {
+	background-color: #000;
+}
+nav ul {
+	display: flex;
+	list-style: none;
+	justify-content: space-evenly;
+	padding: 1em;
+}
+nav a {
+	font-size: 1.25rem;
+	color: #ffff00;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#link:hover {
+	color: #fff;
+	background-color: #ee4b2b;
+}
+#link:active {
+	color: #fff;
+	background-color: #000;
+}
+
+/* main */
+h1 {
+	text-align: center;
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+section {
+	flex-basis: 30%;
+	text-align: center;
+	background: linear-gradient(to top, #000000 0%, #343a40 100%);
+	padding: 4%;
+	min-width: 15.75em;
+	margin-bottom: 2em;
+	border-radius: 0.75em;
+	color: #ffff00;
+}
+section img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 1.25em;
+}
+section h2 {
+	font-size: 1.25rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	margin-bottom: 1.25em;
+	border-radius: 0.75em;
+	background-color: #ee4b2b;
+}
+section p {
+	color: #fff;
+	line-height: 1.25em;
+	font-size: 1rem;
+}
+
+/* footer */
+footer {
+	text-align: center;
+	color: #ffff00;
+	background-color: #000;
+	padding: 1em;
+	margin-top: 1.25em;
+}
