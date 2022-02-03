@@ -1,80 +1,87 @@
-@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;600&display=swap");
-
+/* MY TEMPLATE */
+/* CSS Reset */
 * {
 	/* view layout on screen while styling | remove after styling	*/
-	/* outline: 0.0625rem dotted #ee4b2b; */
-
-	/* include rules for specific web page below this line */
+	outline: 0.0625em dashed #ff0075;
 	margin: 0;
 	padding: 0;
-}
-
-/* span test for optimal line length 45-75 | remove after styling */
-.optimalline {
-	/* 	background-color: #preferred color; */
-}
-
-/* the whole enchilada */
-html {
-	box-sizing: border-box; /* width and height properties includes content padding border */
-	font-size: 100%;
+	scroll-behavior: smooth;
 }
 *,
 *:before,
 *:after {
 	box-sizing: inherit; /* inherits property from parent element */
 }
+html {
+	box-sizing: border-box; /* width and height properties includes content padding border */
+	font-size: 100%;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+/* color variables */
+:root {
+	--yellow: #ffff00;
+	--dark-orange: #ee4b2b;
+	--black: #000;
+	--white: #fff;
+	--dark-gray: #343a40;
+}
 
 /* body */
 body {
-	font-family: "MuseoModerno", cursive;
+	font-family: "Poppins", sans-serif;
+	max-width: 80%;
+	margin: 0 auto;
 }
-
 /* header */
-.site-logo {
+header .site-logo {
 	display: flex;
 	align-items: center;
-	text-decoration: none;
 }
-.site-logo-icon {
+header .site-logo .site-logo-icon {
 	width: 5em;
 }
-.site-logo-name {
-	color: #ffff00;
+header .site-logo .site-logo-name {
+	color: var(--yellow);
 	text-transform: uppercase;
 	font-size: 2.5rem;
 	margin-left: 0.5em;
 }
 header {
-	background-color: #ee4b2b;
+	background-color: var(--dark-orange);
 	padding: 1em;
 }
-
-/* navigation */
-nav {
-	background-color: #000;
+/* navbar */
+#navbar {
+	background-color: var(--black);
 }
-nav ul {
+#navbar ul {
 	display: flex;
-	list-style: none;
 	justify-content: space-evenly;
 	padding: 1em;
 }
-nav a {
-	font-size: 1.25rem;
-	color: #ffff00;
-	text-decoration: none;
+#navbar ul li #link {
+	font-size: 1.5rem;
+	color: var(--yellow);
 	text-transform: uppercase;
+	padding: 0.75em 0.75em;
 }
-#link:hover {
-	color: #fff;
-	background-color: #ee4b2b;
+#navbar ul li #link:hover {
+	background-color: var(--dark-orange);
 }
-#link:active {
-	color: #fff;
-	background-color: #000;
+/* sticky navbar */
+/* the sticky class is added to the navbar with JavaScript when it reaches its scroll position */
+.sticky {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 2;
 }
-
 /* main */
 h1 {
 	text-align: center;
@@ -91,12 +98,12 @@ h1 {
 section {
 	flex-basis: 30%;
 	text-align: center;
-	background: linear-gradient(to top, #000000 0%, #343a40 100%);
+	background: linear-gradient(to top, var(--black) 0%, var(--dark-gray) 100%);
 	padding: 4%;
 	min-width: 15.75em;
 	margin-bottom: 2em;
 	border-radius: 0.75em;
-	color: #ffff00;
+	color: var(--yellow);
 }
 section img {
 	max-width: 100%;
@@ -111,10 +118,10 @@ section h2 {
 	padding-bottom: 0.25em;
 	margin-bottom: 1.25em;
 	border-radius: 0.75em;
-	background-color: #ee4b2b;
+	background-color: var(--dark-orange);
 }
 section p {
-	color: #fff;
+	color: var(--white);
 	line-height: 1.25em;
 	font-size: 1rem;
 }
@@ -122,8 +129,8 @@ section p {
 /* footer */
 footer {
 	text-align: center;
-	color: #ffff00;
-	background-color: #000;
+	color: var(--yellow);
+	background-color: var(--black);
 	padding: 1em;
 	margin-top: 1.25em;
 }
